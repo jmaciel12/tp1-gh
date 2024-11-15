@@ -1,0 +1,32 @@
+// Etraer el id de la receta de la URL
+let querString = location.search;
+let querStringObj = new URLSearchParams(querString);
+let idReceta = querStringObj.get('id');
+console.log(idReceta);
+
+// Mostrar la información de la receta en el HTML
+
+let url = `https://dummyjson.com/recipes/${idReceta}`;
+fetch(url)
+    .then(function(res) {
+        return res.json();
+    })
+    .then(function(data) {
+        console.log(data);
+
+        let characterNameElement = document.querySelector('.name-receta-detalle');
+        let characterImageElement = document.querySelector('.img-receta-detalle');
+        let characterPreparationElement = document.querySelector('.preparation');
+        let characterCookTimeElement = document.querySelector('.cook-time');
+        let characterCategoriesElement = document.querySelector('.categorias');
+
+        characterNameElement.textContent += data.name;
+        characterImageElement.src = data.image;
+        characterPreparationElement.innerHTML = `<b>Preparación:</b> ${data.instructions}`;
+        characterCookTimeElement.innerHTML = `<b>Tiempo de preparación:</b> ${data.cookTimeMinutes}`;
+        characterCategoriesElement.innerHTML = `<b>Categorías:</b> ${data.tags.join(', ')}`;
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
+
