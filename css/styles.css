@@ -168,7 +168,8 @@ header {
 /********PAGINA DETALLE DE RECETA********/
 
 .container-details img{
-    width: 800px;
+    border: solid 1px black;
+    padding: 2px;
 
 }
 .container-details{
@@ -190,10 +191,14 @@ header {
     padding: 0 10px;
 }
 
-.items-receta{
+.categorias{
     font-weight: bold;
 }
 
+.categorias a{
+    color: black;
+    font-weight: normal;
+}
 
 
 /*******FORMULARIO DE REGISTRO Y LOGIN******/

@@ -18,13 +18,24 @@ fetch(url)
         let characterImageElement = document.querySelector('.img-receta-detalle');
         let characterPreparationElement = document.querySelector('.preparation');
         let characterCookTimeElement = document.querySelector('.cook-time');
-        let characterCategoriesElement = document.querySelector('.categorias');
 
         characterNameElement.textContent += data.name;
         characterImageElement.src = data.image;
         characterPreparationElement.innerHTML = `<b>Preparación:</b> ${data.instructions}`;
         characterCookTimeElement.innerHTML = `<b>Tiempo de preparación:</b> ${data.cookTimeMinutes}`;
-        characterCategoriesElement.innerHTML = `<b>Categorías:</b> ${data.tags.join(', ')}`;
+
+        // Mostrar las categorías de la receta y linkearlas a sus respectivas URLs
+        let categorias = data.tags;
+        let categoriasElement = document.querySelector('.categorias');
+        for (let i = 0; i < categorias.length; i++) {
+            let linkElement = document.createElement('a');
+            linkElement.href = `categorias.html?categoria=${categorias[i]}`;
+            linkElement.textContent = categorias[i];
+            categoriasElement.appendChild(linkElement);
+            if (i < categorias.length - 1) {
+                categoriasElement.innerHTML += ' ';
+            }
+        }
     })
     .catch(function(error) {
         console.log(error);
