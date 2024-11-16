@@ -29,7 +29,7 @@ fetch(url)
         let categoriasElement = document.querySelector('.categorias');
         for (let i = 0; i < categorias.length; i++) {
             let linkElement = document.createElement('a');
-            linkElement.href = `categorias.html?categoria=${categorias[i]}`;
+            linkElement.href = `detallecategoria.html?categoria=${categorias[i]}`;
             linkElement.textContent = categorias[i];
             categoriasElement.appendChild(linkElement);
             if (i < categorias.length - 1) {

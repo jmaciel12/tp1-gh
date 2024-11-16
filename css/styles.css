@@ -272,3 +272,48 @@ header {
 .button-submit:hover {
     background-color: #0056b3; /* Azul más oscuro en hover */
 }
+
+
+/********PAGINA CATEGRIAS********/
+.title-categorias{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.tag-name a{
+    color: black;
+}
+
+.container-tags {
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    background: #FFFFFF;
+    padding: 20px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.container-tags article{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    /*Color de fondo de la tarjeta que quede lindo*/
+    background: #FFFFFF;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.tag-details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+

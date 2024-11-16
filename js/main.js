@@ -22,7 +22,7 @@ function obtenerRecetas() {
                                     <div class="product-details">
                                         <img src="${arrayDeRecetas[i].image}" alt="${arrayDeRecetas[i].name}">
                                         <p class="receta-name">${arrayDeRecetas[i].name}</p>
-                                        <p>Difficulty: ${arrayDeRecetas[i].difficulty}</p>
+                                        <p>Dificultad: ${arrayDeRecetas[i].difficulty}</p>
                                     </div>
                                     <div class="product-actions">
                                         <a href="detallereceta.html?id=${arrayDeRecetas[i].id}">Detalle</a>
