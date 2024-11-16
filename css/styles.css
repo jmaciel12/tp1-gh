@@ -18,8 +18,12 @@ a {
     text-decoration: none;
 }
 
-/*******PAGINA HOME******/
+body {
+    margin-bottom: 80px;
+    overflow: auto;
+}
 
+/*******PAGINA HOME******/
 
 header {
     width: 100%;
@@ -69,7 +73,8 @@ header {
     width: 600px;
     height: 30px;
     border: solid 1px #ccc;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);     
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); 
+    padding: 0 10px;    
 }
 
 .search-button{
@@ -93,10 +98,6 @@ header {
     bottom: 0;
     left: 0;
     width: 100%;
-}
-
-body{
-    margin-bottom: 80px;
 }
 
 .container-products {
@@ -195,4 +196,74 @@ body{
 
 
 
+/*******FORMULARIO DE REGISTRO Y LOGIN******/
 
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; 
+    z-index: -1;   
+}
+
+
+.column-medium {
+    width: 400px; 
+    height: 300px; 
+    background-color: white; 
+    padding: 20px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+}
+
+.column-medium h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333; 
+}
+
+.form-contact .group-form {
+    margin-bottom: 15px;
+}
+
+.form-contact label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-contact a {
+    text-decoration: underline;
+    color:#007bff
+}
+
+.input-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.button-submit {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #007bff; 
+    color: white; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.button-submit:hover {
+    background-color: #0056b3; /* Azul más oscuro en hover */
+}

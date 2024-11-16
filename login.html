@@ -12,7 +12,7 @@
             <section class="navigation">
                 <a href="./index.html"><img class="logo" src="imgs/logo.jpg" alt=""></a>
                 <form class="search-form" action="resultadobusqueda.html" method="get">  
-                    <input type="text" class="search" placeholder="     Buscar..." >
+                    <input type="text" class="search" placeholder="Buscar..." >
                     <button type="submit" class="search-button">Buscar</button>
                 </form>
                 <ul class="menu">
@@ -27,8 +27,26 @@
             </section>
         </div>
     </header>
+    <div class="main-container">
+        <div class="row-center">
+            <div class="column-medium">
+                <h2>Login</h2>
+                <form method="get" class="form-contact" action="index.html">
+                    <div class="group-form">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" name="email" id="email" class="input-control">
+                    </div>
+                    <div class="group-form">
+                        <label for="password">Contraseña</label>
+                        <input type="password" name="password" id="password" class="input-control">
+                    </div>
+                    <a href="registro.html">No tengo cuenta</a>
+                    <button type="submit" class="button-submit">ENVIAR</button>
+                </form>
+            </div>
+        </div>
+    </div>    
     <footer class="footer">
-        <div class="footer-item">Ramiro Porro</div>
         <div class="footer-item">Jonatan Maciel</div>
     </footer>
     <script src="js/login.js"></script>
