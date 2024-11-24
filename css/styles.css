@@ -21,7 +21,6 @@ a {
 
 body {
   margin-bottom: 80px;
-  overflow: auto;
 }
 
 /*******PAGINA HOME******/
@@ -30,6 +29,10 @@ header {
   width: 100%;
   background-color: white;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo {
@@ -38,6 +41,7 @@ header {
 }
 
 .navigation {
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -121,6 +125,7 @@ header {
   border: 1px solid black;
 }
 .product-details {
+  padding: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -132,6 +137,9 @@ header {
 
 .product-details p {
   margin-top: 10px;
+  width: 100%;
+  word-wrap: break-word;
+  text-align: center;
 }
 
 .receta-name {
@@ -178,10 +186,10 @@ header {
 }
 .container-details {
   border: solid 1px black;
-  width: 900px;
+  width: 60%;
   height: 300px;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 80px;
   margin-bottom: 20px;
   display: flex;
   gap: 20px;
@@ -281,7 +289,6 @@ header {
 
 /********PAGINA CATEGRIAS********/
 
-
 .main-categorias {
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
@@ -335,4 +342,96 @@ header {
   font-style: normal;
 }
 
+/* Resoluciones menores a 1024px */
+@media (max-width: 1024px) {
+  header {
+    flex-direction: row;
+    align-items: center;
+  }
+  .search {
+    width: 90%;
+  }
 
+  .product-card {
+    width: 25%;
+  }
+
+  .container-products {
+    gap: 60px;
+  }
+
+  .container-details {
+    width: 95%;
+    margin-top: 50px;
+  }
+}
+
+/* Resoluciones menores a 768px */
+@media (max-width: 768px) {
+  header {
+    padding: 10px;
+    height: 80px;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .logo {
+    width: 150px;
+    height: auto;
+    position: absolute;
+    /* Centrar el logo horizontal y verticalmente (no encontré otra forma de hacerlo)*/
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .mobile-menu {
+    width: 40px;
+    display: block;
+    margin-left: auto;
+  }
+
+  .search,
+  .search-form,
+  .menu,
+  .user {
+    display: none;
+  }
+
+  .product-card {
+    width: 40%;
+  }
+
+  .container-products {
+    gap: 60px;
+  }
+
+  .container-details {
+    flex-direction: column;
+    width: 70%;
+    text-align: center;
+    height: 60vh;
+    overflow: auto;
+    padding: 10px;
+  }
+}
+
+/* Resoluciones menores a 480px */
+@media (max-width: 480px) {
+  .container-details {
+    width: 90%;
+  }
+
+  .product-card {
+    width: 90%;
+  }
+
+  .column-medium {
+    width: 100%;
+  }
+
+  .row-center {
+    width: 90%;
+  }
+}

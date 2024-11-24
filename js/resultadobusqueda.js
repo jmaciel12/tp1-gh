@@ -3,6 +3,10 @@ let querString = location.search;
 let querStringObj = new URLSearchParams(querString);
 let busqueda = querStringObj.get("search");
 
+// Verificar si se proporcionó un término de búsqueda
+if (busqueda === "") {
+  alert("Por favor ingrese un término de búsqueda.");
+}
 // Verificar si el término  buscado tiene al menos 3 caracteres
 if (busqueda.length < 3) {
   alert("El término de búsqueda debe tener al menos 3 caracteres.");
@@ -59,3 +63,4 @@ if (busqueda.length < 3) {
       console.log("Error:", e);
     });
 }
+
